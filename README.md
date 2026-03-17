@@ -13,11 +13,11 @@ let items = ["a", "b", "c", "d", "e"];
 
 // each element exactly once, in random order
 for val in items.shuffled() {
-    println!("{val}"); 
+    println!("{val}");
 }
 ```
 
-### (no-std) Seeded or custom RNG 
+### (no-std) Seeded or custom RNG
 
 Use a fixed seed for a deterministic shuffle:
 
