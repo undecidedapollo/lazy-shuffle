@@ -1,8 +1,17 @@
-[workspace]
-resolver = "3"
-members = ["shuffler"]
+[package]
+name = "lazy-shuffle"
+version = "0.1.0"
+edition = "2024"
+description = "Lazy Fisher-Yates shuffle iterator — yields random permutations without allocating the full sequence"
+license = "MIT OR Apache-2.0"
+authors = ["Jonah Nestrick"]
+keywords = ["shuffle", "iterator", "random", "fisher-yates", "no-std"]
+categories = ["algorithms", "no-std::no-alloc"]
 
-
-[workspace.dependencies]
-rand = { version = "0.9.2", default-features = false, features = ["small_rng", "os_rng"] }
+[dependencies]
+rand = { version = "0.9.2", default-features = false, features = ["small_rng"] }
 hashbrown = { version = "0.15", default-features = false, features = ["default-hasher"] }
+
+[features]
+default = ["std"]
+std = ["rand/os_rng"]

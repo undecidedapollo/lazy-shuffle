@@ -36,6 +36,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "lazy-shuffle"
+version = "0.1.0"
+dependencies = [
+ "hashbrown",
+ "rand",
+]
+
+[[package]]
 name = "libc"
 version = "0.2.183"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -63,14 +71,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "76afc826de14238e6e8c374ddcc1fa19e374fd8dd986b0d2af0d02377261d83c"
 dependencies = [
  "getrandom",
-]
-
-[[package]]
-name = "shuffler"
-version = "0.1.0"
-dependencies = [
- "hashbrown",
- "rand",
 ]
 
 [[package]]
