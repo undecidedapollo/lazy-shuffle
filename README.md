@@ -1,6 +1,6 @@
 # lazy-shuffle
 
-Lazy Fisher-Yates shuffle iterator - yielding random permutations without allocating the full sequence
+Lazy Fisher-Yates shuffle iterator yielding random permutations without allocating the full sequence
 
 ## Usage
 
