@@ -5,7 +5,7 @@ extern crate alloc;
 use core::iter::FusedIterator;
 
 use hashbrown::HashMap;
-use rand::{Rng, SeedableRng, rngs::SmallRng};
+use rand::{Rng, RngExt, SeedableRng, rngs::SmallRng};
 
 #[must_use = "iterators are lazy and do nothing unless consumed"]
 pub struct ShuffledIter<R: Rng = SmallRng> {
@@ -30,7 +30,7 @@ impl ShuffledIter {
         Self {
             remaining: len,
             displaced: HashMap::new(),
-            rng: SmallRng::from_os_rng(),
+            rng: rand::make_rng(),
         }
     }
 }

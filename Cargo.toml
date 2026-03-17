@@ -11,9 +11,9 @@ categories = ["algorithms", "no-std::no-alloc"]
 repository = "https://github.com/undecidedapollo/lazy-shuffle"
 
 [dependencies]
-rand = { version = "0.9.2", default-features = false, features = ["small_rng"] }
-hashbrown = { version = "0.15", default-features = false, features = ["default-hasher"] }
+rand = { version = "0.10.0", default-features = false }
+hashbrown = { version = "0.16.1", default-features = false, features = ["default-hasher"] }
 
 [features]
 default = ["std"]
-std = ["rand/os_rng"]
+std = ["rand/sys_rng"]
