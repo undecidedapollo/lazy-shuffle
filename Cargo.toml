@@ -1,6 +1,6 @@
 [package]
 name = "lazy-shuffle"
-version = "0.1.0"
+version = "0.0.1"
 edition = "2024"
 rust-version = "1.85"
 description = "Lazy Fisher-Yates shuffle iterator - yielding random permutations without allocating the full sequence"
@@ -8,6 +8,7 @@ license = "MIT OR Apache-2.0"
 authors = ["Jonah Nestrick"]
 keywords = ["shuffle", "iterator", "random", "fisher-yates", "no-std"]
 categories = ["algorithms", "no-std::no-alloc"]
+repository = "https://github.com/undecidedapollo/lazy-shuffle"
 
 [dependencies]
 rand = { version = "0.9.2", default-features = false, features = ["small_rng"] }
